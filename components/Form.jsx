@@ -32,7 +32,10 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
             Tag
-            <span className="font-normal text-sm"> (#product, #webdevelopment, #idea)</span>
+            <span className="font-normal text-sm">
+              {" "}
+              (#product, #webdevelopment, #idea)
+            </span>
           </span>
 
           <input
@@ -44,10 +47,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           />
         </label>
         <div className="flex-end mx-3 mb-5 gap-4">
-          <Link
-            href="/"
-            className="text-sm text-gray-500 hover:text-gray-400"
-          >
+          <Link href="/" className="text-sm text-gray-500 hover:text-gray-400">
             Cancel
           </Link>
 
