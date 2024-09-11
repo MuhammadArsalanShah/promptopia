@@ -22,8 +22,8 @@ export const GET = async (request, { params }) => {
 
 //PATCH (update)
 export const PATCH = async (request, { params }) => {
-  const { prompt, tag } = await request.Json();
-
+  const { prompt, tag } = await request.json();
+  console.log('here its inside the route')
   try {
     await connectToDB()
 
@@ -38,7 +38,7 @@ export const PATCH = async (request, { params }) => {
     
     return new Response(JSON.stringify(existingPrompt), { status: 200 })
   } catch (error) {
-    return new Response("Failed to update the prompt", { status: 200 })
+    return new Response("Failed to update the prompt", { status: 500 })
     
   }
 }
