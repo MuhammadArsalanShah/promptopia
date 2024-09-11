@@ -5,7 +5,6 @@ import { useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
 
 import Image from "next/image";
-import { set } from "mongoose";
 
 const PromptCard = ({
   key,
@@ -28,7 +27,7 @@ const PromptCard = ({
         <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
           <Image
             src={post.creator.image}
-            alt="user image"
+            alt="user_image"
             width={40}
             height={40}
             className="rounded-full object-contain"
@@ -51,6 +50,7 @@ const PromptCard = ({
                 ? "/assets/icons/tick.svg"
                 : "/assets/icons/copy.svg"
             }
+            alt="Copy and tick icon"
             width={12}
             height={12}
           />
